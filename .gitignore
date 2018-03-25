@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# public folder house contents that will be built
+public/
