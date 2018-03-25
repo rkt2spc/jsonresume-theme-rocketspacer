@@ -9,6 +9,7 @@ install:
   - npm install
 script:
   - npm run lint
+  - npm uninstall resume-cli
   - npm install --global resume-cli
   - npm install --global jsonresume-theme-rocketspacer
   - resume export --theme rocketspacer public/index.html
