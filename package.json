@@ -1,12 +1,22 @@
 {
   "name": "jsonresume-theme-rocketspacer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "My (rocketspacer) personal theme for JSON Resume",
+  "keywords": [
+    "resume",
+    "jsonresume",
+    "theme",
+    "curriculum vitae",
+    "CV"
+  ],
   "author": "Tuan Nguyen <nmtuan.dev@gmail.com>",
   "license": "MIT",
-  "homepage": "https://rocketspacer.github.io/resume",
-  "bugs": "https://github.com/rocketspacer/resume/issues",
-  "repository": "github:rocketspacer/resume",
+  "homepage": "https://rocketspacer.github.io/jsonresume-theme-rocketspacer",
+  "bugs": "https://github.com/rocketspacer/jsonresume-theme-rocketspacer/issues",
+  "repository": "github:rocketspacer/jsonresume-theme-rocketspacer",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "scripts": {
     "start": "resume serve --port ${PORT:-4000}",
     "build": "resume export public/index --format html",
@@ -16,7 +26,6 @@
   },
   "dependencies": {
     "ejs": "^2.5.7",
-    "handlebars": "^4.0.11",
     "resume-cli": "0.4.19"
   },
   "devDependencies": {
