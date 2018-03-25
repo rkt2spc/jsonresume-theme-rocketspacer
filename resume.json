@@ -1,0 +1,191 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Software Engineer, Backend Development",
+    "picture": "dummy-profile.png",
+    "email": "john.doe@gmail.com",
+    "phone": "(+84) 0934-018-329",
+    "website": "https://john.doe",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "johndoe",
+        "url": "https://github.com/johndoe"
+      },
+      {
+        "network": "StackOverflow",
+        "username": "johndoe",
+        "url": "https://stackoverflow.com/users/johndoe"
+      },
+      {
+        "network": "Facebook",
+        "username": "John Doe",
+        "url": "https://www.facebook.com/johndoe"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Google",
+      "position": "Software Engineer 1",
+      "website": "https://google.com",
+      "startDate": "2017-09-01",
+      "summary": "Help building components of the Foo system",
+      "highlights": [
+        "Awarded 'Employee of the Month'",
+        "Optimize computational cost by 10%"
+      ]
+    },
+    {
+      "company": "Microsoft",
+      "position": "Intern",
+      "website": "https://microsoft.com",
+      "startDate": "2015-05-01",
+      "endDate": "2015-08-01",
+      "summary": "Work here as an intern for the ABC project during summer"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Nerds movement",
+      "position": "Founder",
+      "website": "https://nerdsmovement.com",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Helping nerds around the world to realize their true nature"
+    },
+    {
+      "organization": "Charity Funds",
+      "position": "Volunteer",
+      "website": "https://charityfunds.com",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Delivering help to people who needs it",
+      "highlights": [
+        "Bring food to 350 sick people in need of help"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "MIT",
+      "area": "Artificial Intelligence",
+      "studyType": "Master",
+      "startDate": "2015-09-01",
+      "endDate": "2017-07-01"
+    },
+    {
+      "institution": "UC Berkeley",
+      "area": "Software Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2011-09-01",
+      "endDate": "2015-07-01",
+      "gpa": "3.2 / 4.0",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "BE8080 - Distributed Systems"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Employee of the month",
+      "date": "2018-01-15",
+      "awarder": "Google",
+      "summary": "Awarded for outstanding working performance"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Optimizing artificial neural network",
+      "publisher": "Nature and Science journal",
+      "releaseDate": "2014-10-01",
+      "website": "http://publication.com",
+      "summary": "My publication on a new algorithm that speed up recognition in artificial neural network"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend Development",
+      "level": "Master",
+      "keywords": [
+        "HTML/CSS/Javascript",
+        "Boostrap",
+        "Babel",
+        "React/Redux",
+        "Webpack"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Master",
+      "keywords": [
+        "NodeJS",
+        "Golang",
+        "MongoDB",
+        "Postgres",
+        "Redis"
+      ]
+    },
+    {
+      "name": "System Administration",
+      "level": "Master",
+      "keywords": [
+        "AWS",
+        "Linux",
+        "NGINX",
+        "CloudFlare",
+        "Shell",
+        "Docker"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native speaker"
+    },
+    {
+      "name": "French",
+      "level": "Proficient"
+    },
+    {
+      "name": "Japanese",
+      "level": "Beginner"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Anime",
+      "keywords": [
+        "Re:Zero",
+        "Steins Gate"
+      ]
+    },
+    {
+      "name": "Movies",
+      "keywords": [
+        "Star Wars",
+        "Lord of the Rings"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe <jane.doe@gmail.com>",
+      "reference": "Passionate and hard working man"
+    },
+    {
+      "name": "Don Joe",
+      "reference": "The best employee we could ever have"
+    }
+  ]
+}
