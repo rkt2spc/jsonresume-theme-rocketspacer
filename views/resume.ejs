@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title><%= resume.basics.name %></title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+  <% if (css) { %>
+    <style type="text/css"><%- css %></style>
+  <% } %>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header">
+		<div class="container">
+			<div class="row">
+        <div class="col-sm-3">
+          <img src="<%= resume.basics.picture %>" class="img-responsive img-circle pull-right" style="max-height: 88px">
+        </div>
+				<div class="col-sm-9">
+          <h1><%= resume.basics.name %></h1>
+          <h2><%= resume.basics.label %></h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+  <!-- CONTENT: Re-arrange sections order if necessary -->
+  <div id="content" class="container">
+    <!-- Contact -->
+    <%- include('partials/contact', { contact: { email: resume.basics.email, phone: resume.basics.phone, website: resume.basics.website } }); %>
+    <!-- About -->
+    <%- include('partials/about', { summary: resume.basics.summary }); %>
+    <!-- Profiles -->
+    <%- include('partials/profiles', { profiles: resume.basics.profiles }); %>
+    <!-- Work -->
+    <%- include('partials/work', { work: resume.work }); %>
+    <!-- Skills -->
+    <%- include('partials/skills', { skills: resume.skills }); %>
+    <!-- Education -->
+    <%- include('partials/education', { education: resume.education }); %>
+    <!-- Awards -->
+    <%- include('partials/awards', { awards: resume.awards }); %>
+    <!-- Volunteer -->
+    <%- include('partials/volunteer', { volunteer: resume.volunteer }); %>
+    <!-- Publications -->
+    <%- include('partials/publications', { publications: resume.publications }); %>
+    <!-- Languages -->
+    <%- include('partials/languages', { languages: resume.languages }); %>
+    <!-- Interests -->
+    <%- include('partials/interests', { interests: resume.interests }); %>
+    <!-- References -->
+    <%- include('partials/references', { references: resume.references }); %>
+  </div>
+</body>
+</html>

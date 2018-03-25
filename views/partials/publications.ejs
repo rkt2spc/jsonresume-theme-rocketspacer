@@ -1,0 +1,42 @@
+<%
+/**
+ * @typedef {object} Publication
+ * @property {string} name Publication name
+ * @property {string} releaseDate Publication release date
+ * @property {string} publisher Publication publisher
+ * @property {string} summary Publication summary
+ *
+ * [Section] Publications
+ * @param {array.<Publication>} publications
+ */
+%>
+
+<% if (publications && Array.isArray(publications) && publications.length > 0) { %>
+  <section id="publications" class="row">
+    <aside class="col-sm-3">
+      <h3>Publications</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% publications.forEach((publication) => { %>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span><%= publication.name %></span>
+              <span class="date"><%= this.prettyDate(publication.releaseDate) %></span>
+            </h4>
+            <div class="website pull-right">
+              <a target="_blank" href="<%= publication.website %>"></a>
+            </div>
+            <div class="publisher">
+              <em>Published by</em>
+              <strong><%= publication.publisher %></strong>
+            </div>
+            <div class="summary">
+              <p><%= publication.summary %></p>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

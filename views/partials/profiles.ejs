@@ -1,0 +1,31 @@
+<%
+/**
+ * @typedef {object} Profile
+ * @property {string} network Profile network
+ * @property {string} username Profile username
+ * @property {string} url Profile url
+ *
+ * [Section] Profiles
+ * @param {array.<Profile>} profiles
+ */
+%>
+
+<% if (profiles && Array.isArray(profiles) && profiles.length > 0) { %>
+  <section id="profiles" class="row">
+    <aside class="col-sm-3">
+      <h3>Profiles</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% profiles.forEach((profile) => { %>
+          <div class="col-sm-6">
+            <strong class="network"><%= profile.network %></strong>
+            <div class="url">
+              <a target="_blank" href="<%= profile.url %>"><%= profile.username || profile.url %></a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

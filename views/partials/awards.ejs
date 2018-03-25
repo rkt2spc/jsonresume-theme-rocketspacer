@@ -1,0 +1,43 @@
+<%
+/**
+ * @typedef {object} Award
+ * @property {string} title Award title
+ * @property {string} date Award date
+ * @property {string} awarder Award awarder
+ * @property {string} summary Award summary
+ *
+ * [Section] Awards
+ * @param {array.<Award>} awards
+ */
+%>
+
+<% if (awards && Array.isArray(awards) && awards.length > 0) { %>
+  <section id="awards" class="row">
+    <aside class="col-sm-3">
+      <h3>Awards</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% awards.forEach((award) => { %>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span><%= award.title %></span>
+            </h4>
+            <div class="date pull-right">
+              <em>Awarded</em>
+              <%= this.prettyDate(award.date) %>
+            </div>
+            <div>
+              <em>by</em>
+              <strong><%= award.awarder %></strong>
+            </div>
+            <div class="summary">
+              <%= award.summary %>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>
+

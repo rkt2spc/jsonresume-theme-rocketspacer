@@ -1,0 +1,34 @@
+<%
+/**
+ * @typedef {object} Interest
+ * @property {string} name Interest name
+ * @property {array.<string>} keywords Interest keywords
+ *
+ * [Section] Interests
+ * @param {array.<Interest>} interests
+ */
+%>
+
+<% if (interests && Array.isArray(interests) && interests.length > 0) { %>
+  <section id="interests" class="row">
+    <aside class="col-sm-3">
+      <h3>Interests</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% interests.forEach((interest) => { %>
+          <div class="col-sm-6">
+            <div class="name">
+              <h4><%= interest.name %></h4>
+            </div>
+            <ul class="keywords">
+              <% interest.keywords.forEach((keyword) => { %>
+                <li><%= keyword %></li>
+              <% }); %>
+            </ul>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

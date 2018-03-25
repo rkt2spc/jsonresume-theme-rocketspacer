@@ -1,0 +1,28 @@
+<%
+/**
+ * @typedef {object} Language
+ * @property {string} name Language name
+ * @property {string} level Language level
+ *
+ * [Section] Languages
+ * @param {array.<Language>} languages
+ */
+%>
+
+<% if (languages && Array.isArray(languages) && languages.length > 0) { %>
+  <section id="languages" class="row">
+    <aside class="col-sm-3">
+      <h3>Languages</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% languages.forEach((language) => { %>
+          <div class="col-sm-6">
+            <div class="language"><strong><%= language.name %></strong></div>
+            <div class="fluency"><%= language.level %></div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

@@ -1,0 +1,56 @@
+<%
+/**
+ * @typedef {object} Volunteer
+ * @property {string} organization Volunteer organization
+ * @property {string} startDate Volunteer startDate
+ * @property {string} endDate Volunteer endDate
+ * @property {string} website Volunteer company website
+ * @property {string} position Volunteer position
+ * @property {string} summary Volunteer summary
+ * @property {array.<string>} highlights Volunteer highlights
+ *
+ * [Section] Volunteer
+ * @param {array.<Volunteer>} volunteer
+ */
+%>
+
+<% if (volunteer && Array.isArray(volunteer) && volunteer.length > 0) { %>
+  <section id="volunteer" class="row">
+    <aside class="col-sm-3">
+      <h3>Volunteer</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% volunteer.forEach((v) => { %>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span><%= v.organization %></span>
+              <span class="date">
+                <%= this.prettyDate(v.startDate) %> — <%= this.prettyDate(v.endDate) || 'Now' %>
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a target="_blank" href="<%= v.website %>"><%= v.website %></a>
+            </div>
+            <div class="position">
+              <%= v.position %>
+            </div>
+            <div class="summary">
+              <p><%= v.summary %></p>
+            </div>
+            <% if (v.highlights && Array.isArray(v.highlights) && v.highlights.length > 0) { %>
+              <p>
+                <strong>Highlights</strong>
+              </p>
+              <ul class="highlights">
+                <% v.highlights.forEach((h) => { %>
+                  <li class="bullet"><%= h %></li>
+                <% }); %>
+              </ul>
+            <% } %>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

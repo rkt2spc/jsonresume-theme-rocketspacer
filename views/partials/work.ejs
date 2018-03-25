@@ -1,0 +1,54 @@
+<%
+/**
+ * @typedef {object} Work
+ * @property {string} company Work company
+ * @property {string} startDate Work startDate
+ * @property {string} endDate Work endDate
+ * @property {string} website Work company website
+ * @property {string} position Work position
+ * @property {string} summary Work summary
+ * @property {array.<string>} highlights Work highlights
+ *
+ * [Section] Work
+ * @param {array.<Work>} work
+ */
+%>
+
+<% if (work && Array.isArray(work) && work.length > 0) { %>
+  <section id="work" class="row">
+    <aside class="col-sm-3">
+      <h3>Work</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% work.forEach((w) => { %>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span><%= w.company %></span>
+              <span class="date">
+                <%= this.prettyDate(w.startDate) %> — <%= this.prettyDate(w.endDate) || 'Now' %>
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a target="_blank" href="<%= w.website %>"><%= w.website %></a>
+            </div>
+            <div class="position">
+              <%= w.position %>
+            </div>
+            <div class="summary">
+              <p><%= w.summary %></p>
+            </div>
+            <% if (w.highlights && Array.isArray(w.highlights) && w.highlights.length > 0) { %>
+              <p><strong>Highlights</strong></p>
+              <ul class="highlights">
+                <% w.highlights.forEach((h) => { %>
+                  <li class="bullet"><%= h %></li>
+                <% }); %>
+              </ul>
+            <% } %>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>

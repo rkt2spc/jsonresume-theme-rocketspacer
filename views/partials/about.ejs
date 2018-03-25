@@ -1,0 +1,17 @@
+<%
+/**
+ * [Section] About
+ * @param {string} summary Personal summary
+ */
+%>
+
+<% if (summary) { %>
+  <section id="about" class="row">
+    <aside class="col-sm-3">
+      <h3>About</h3>
+    </aside>
+    <div class="col-sm-9">
+      <p><%= summary %></p>
+    </div>
+  </section>
+<% } %>

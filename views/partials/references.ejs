@@ -1,0 +1,31 @@
+<%
+/**
+ * @typedef {object} Reference
+ * @property {string} reference Reference description
+ * @property {string} name Reference author name
+ *
+ * [Section] References
+ * @param {array.<Reference>} references
+ */
+%>
+
+<% if (references && Array.isArray(references) && references.length > 0) { %>
+  <section id="references" class="row">
+    <aside class="col-sm-3">
+      <h3>References</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% references.forEach((reference) => { %>
+          <div class="col-sm-11">
+            <p><%= reference.reference %></p>
+            <p class="name">
+              <strong>— <%= reference.name %></strong></p>
+            </p>
+            <br>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>
