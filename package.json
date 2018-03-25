@@ -9,7 +9,10 @@
   "repository": "github:rocketspacer/resume",
   "scripts": {
     "start": "resume serve --port ${PORT:-4000}",
-    "build": "resume export public/index --format html"
+    "build": "mkdir public && resume export public/index --format html",
+    "lint:js": "eslint --cache --ignore-path .gitignore '**/*.js'",
+    "lint:ejs": "ejslint 'views/**/*.ejs'",
+    "lint": "npm run lint:js && npm run lint:ejs"
   },
   "dependencies": {
     "ejs": "^2.5.7",
@@ -17,6 +20,7 @@
     "resume-cli": "0.4.19"
   },
   "devDependencies": {
+    "ejs-lint": "^0.3.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0"
