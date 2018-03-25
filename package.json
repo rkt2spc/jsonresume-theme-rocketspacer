@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-rocketspacer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My (rocketspacer) personal theme for JSON Resume",
   "author": "Tuan Nguyen <nmtuan.dev@gmail.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "repository": "github:rocketspacer/resume",
   "scripts": {
     "start": "resume serve --port ${PORT:-4000}",
-    "build": "mkdir public && resume export public/index --format html",
+    "build": "resume export public/index --format html",
     "lint:js": "eslint --cache --ignore-path .gitignore '**/*.js'",
     "lint:ejs": "ejslint 'views/**/*.ejs'",
     "lint": "npm run lint:js && npm run lint:ejs"
