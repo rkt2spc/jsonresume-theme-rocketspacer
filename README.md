@@ -8,6 +8,11 @@
 
 A [jsonresume](https://jsonresume.org) theme built in my free time
 
+## Sample
+Here's the sample image (maybe broken if you're viewing from [npm](https://www.npmjs.com/package/jsonresume-theme-rocketspacer)), or you can watch it live [here](https://rocketspacer.github.io/jsonresume-theme-rocketspacer)
+
+<img src="/sample.png" alt="jsonresume-rocketspacer-theme sample image"/>
+
 ## Usage
 
 ```sh
