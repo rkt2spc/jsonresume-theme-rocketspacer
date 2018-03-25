@@ -8,8 +8,8 @@
   "bugs": "https://github.com/rocketspacer/resume/issues",
   "repository": "github:rocketspacer/resume",
   "scripts": {
-    "start": "resume serve",
-    "build": "resume export public/index --force -f html --theme rocketspacer"
+    "start": "resume serve --port ${PORT:-4000}",
+    "build": "resume export public/index --format html"
   },
   "dependencies": {
     "ejs": "^2.5.7",
