@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-rocketspacer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "My (rocketspacer) personal theme for JSON Resume",
   "keywords": [
     "resume",
@@ -19,7 +19,6 @@
   },
   "scripts": {
     "start": "resume serve --port ${PORT:-4000}",
-    "build": "resume export public/index --format html",
     "lint:js": "eslint --cache --ignore-path .gitignore '**/*.js'",
     "lint:ejs": "ejslint 'views/**/*.ejs'",
     "lint": "npm run lint:js && npm run lint:ejs"
