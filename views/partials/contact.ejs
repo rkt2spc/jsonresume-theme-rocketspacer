@@ -16,26 +16,26 @@
     <div class="col-sm-9">
       <div class="row">
         <% if (contact.email) { %>
-        <div class="col-sm-6">
-          <strong>Email</strong>
-          <div>
-            <a target="_blank" href="mailto:<%= contact.email %>"><%= contact.email %></a>
+          <div class="col-sm-6">
+            <strong>Email</strong>
+            <div>
+              <a target="_blank" href="mailto:<%= contact.email %>"><%= contact.email %></a>
+            </div>
           </div>
-        </div>
         <% } %>
         <% if (contact.phone) { %>
-        <div class="col-sm-6">
-          <strong>Phone</strong>
-          <div class="phone"><%= contact.phone %></div>
-        </div>
+          <div class="col-sm-6">
+            <strong>Phone</strong>
+            <div class="phone"><%= contact.phone %></div>
+          </div>
         <% } %>
         <% if (contact.website) { %>
-        <div class="col-sm-6">
-          <strong>Website</strong>
-          <div>
-            <a target="_blank" href="<%= contact.website %>"><%= contact.website %></a>
+          <div class="col-sm-6">
+            <strong>Website</strong>
+            <div>
+              <a target="_blank" href="<%= contact.website %>"><%= contact.website %></a>
+            </div>
           </div>
-        </div>
         <% } %>
       </div>
     </div>
