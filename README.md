@@ -13,7 +13,7 @@ A [jsonresume](https://jsonresume.org) theme built in my free time. Watch it liv
 ## Usage
 
 ```sh
-$ npm install --global jsonresume
+$ npm install --global resume-cli
 $ resume serve --resume <your-resume.json> --theme rocketspacer
 ```
 
