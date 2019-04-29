@@ -112,6 +112,16 @@
       "summary": "My publication on a new algorithm that speed up recognition in artificial neural network"
     }
   ],
+  "certifications": [
+    {
+      "name": "Solution Architect - Associate",
+      "issuingOrganization": "Amazon Web Services (AWS)",
+      "issueDate": "2014-10-01",
+      "expirationDate": "2016-10-01",
+      "credentialID": "627A796D5FE94E64B8845C4C2C0C4020",
+      "credentialURL": "http://credential.dot.com/627A796D5FE94E64B8845C4C2C0C4020"
+    }
+  ],
   "skills": [
     {
       "name": "Frontend Development",

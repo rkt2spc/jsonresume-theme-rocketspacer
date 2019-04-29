@@ -1,0 +1,47 @@
+<%
+/**
+ * @typedef {object} Certifications
+ * @property {string} name Certification name
+ * @property {string} issuingOrganization Certification name
+ * @property {string} issueDate Certification issue date
+ * @property {string} expirationDate Certification issue date
+ * @property {string} credentialID Certification ID
+ * @property {string} credentialURL Certification URL
+ *
+ * [Section] Certifications
+ * @param {array.<Certification>} certifications
+ */
+%>
+
+<% if (certifications && Array.isArray(certifications) && certifications.length > 0) { %>
+  <section id="publications" class="row">
+    <aside class="col-sm-3">
+      <h3>Certifications</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <% certifications.forEach((c) => { %>
+          <div class="col-sm-12">
+            <h4 class="strike-through">
+              <span><%= c.name %></span>
+              <span class="date">
+                <%= this.prettyDate(c.issueDate) %> <%if (c.expirationDate) { %> — <%= this.prettyDate(c.expirationDate) %><% } %>
+              </span>
+            </h4>
+            <div class="website pull-right">
+              <a target="_blank" href="<%= c.website %>"></a>
+            </div>
+            <div>
+              <em>by</em>
+              <strong><%= c.issuingOrganization %></strong>
+            </div>
+            <div class="summary">
+              <em>Credential ID</em>
+              <a target="_blank" href="<%= c.credentialURL %>"><%= c.credentialID %></a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% } %>
