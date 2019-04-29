@@ -12,7 +12,7 @@ script:
   - npm uninstall resume-cli
   - npm install --global resume-cli
   - npm install --global jsonresume-theme-rocketspacer
-  - resume export --theme rocketspacer public/index.html
+  - resume export --force --theme rocketspacer public/index.html
 deploy:
   # https://docs.travis-ci.com/user/deployment/pages
   provider: pages
