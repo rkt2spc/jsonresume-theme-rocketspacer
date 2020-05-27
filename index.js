@@ -15,7 +15,7 @@ const productionRender = (() => {
   const filename = path.join(__dirname, 'views/resume.ejs');
   const template = ejs.compile(fs.readFileSync(filename, 'utf8'), {
     filename : filename,
-    context  : Object.assign({}, helpers),
+    context  : { ...helpers },
   });
   const css = fs.readFileSync(path.join(__dirname, 'assets/stylesheets/style.css'), 'utf8');
 
@@ -28,7 +28,7 @@ const developmentRender = (resume) => {
   const filename = path.join(__dirname, 'views/resume.ejs');
   const template = ejs.compile(fs.readFileSync(filename, 'utf8'), {
     filename : filename,
-    context  : Object.assign({}, helpers),
+    context  : { ...helpers },
   });
   const css = fs.readFileSync(path.join(__dirname, 'assets/stylesheets/style.css'), 'utf8');
 
