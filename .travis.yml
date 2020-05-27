@@ -23,3 +23,4 @@ deploy:
   local-dir: public
   on:
     branch: master
+    node: 8
