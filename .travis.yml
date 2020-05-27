@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - node # latest stable
   - 10
-  - 8
 cache:
   directories:
     - node_modules
@@ -23,4 +22,4 @@ deploy:
   local-dir: public
   on:
     branch: master
-    node: 8
+    node: 10

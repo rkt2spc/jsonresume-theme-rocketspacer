@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-rocketspacer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "My (rocketspacer) personal theme for JSON Resume",
   "keywords": [
     "resume",
@@ -15,7 +15,7 @@
   "bugs": "https://github.com/rocketspacer/jsonresume-theme-rocketspacer/issues",
   "repository": "github:rocketspacer/jsonresume-theme-rocketspacer",
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "scripts": {
     "start": "resume serve --port ${PORT:-4000}",
