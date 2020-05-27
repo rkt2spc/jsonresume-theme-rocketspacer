@@ -1,11 +1,9 @@
-// Dependencies
 const path = require('path');
 const fs = require('fs');
 const ejs = require('ejs');
 
 const helpers = require('./helpers');
 
-// Development render method
 exports.render = (resume) => {
   const filename = path.join(__dirname, 'views/resume.ejs');
   const template = ejs.compile(fs.readFileSync(filename, 'utf8'), {
@@ -13,6 +11,5 @@ exports.render = (resume) => {
     context  : { ...helpers },
   });
   const css = fs.readFileSync(path.join(__dirname, 'assets/stylesheets/style.css'), 'utf8');
-
   return template({ css, resume });
 };
