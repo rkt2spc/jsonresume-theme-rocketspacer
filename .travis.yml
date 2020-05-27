@@ -11,9 +11,9 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm install --global resume-cli
-  - npm install --global jsonresume-theme-rocketspacer
-  - resume export --force --theme rocketspacer public/index.html
+  - npm install --global resume-cli@^1.2.7
+  - npm install --global --force jsonresume-theme-rocketspacer
+  - resume export --theme rocketspacer public/index.html
 deploy:
   # https://docs.travis-ci.com/user/deployment/pages
   provider: pages
